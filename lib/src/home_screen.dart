@@ -14,8 +14,8 @@ class _HomeScreenState extends State<HomeScreen>
     with TickerProviderStateMixin<HomeScreen> {
   TabController _controller;
   final collections = [
-    Collection(id: '1580860', title: 'Walls'),
-    Collection(id: '139386', title: 'Photos'),
+    Collection(id: '1580860', title: 'One Item'),
+    Collection(id: '139386', title: 'Cats'),
   ];
 
   @override
