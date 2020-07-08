@@ -39,6 +39,19 @@ class _CupertinoSlidingSegmentedTabBarState
   void initState() {
     super.initState();
     index = widget.currentIndex;
+    widget.controller.addListener(update);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    widget.controller.removeListener(update);
+  }
+
+  void update() {
+    setState(() {
+      index = widget.controller.index;
+    });
   }
 
   @override
